@@ -16,8 +16,14 @@ const Button = ({ title, onPress, buttonStyle, buttonType }) => {
     <Pressable
       style={({ pressed }) => [
         styles.button,
-        { backgroundColor: Colors[buttonType][0] },
-        pressed && { backgroundColor: Colors[buttonType][1] },
+        {
+          backgroundColor: Colors[buttonType][0],
+          /*buttonType === ButtonTypes.Number? '#71717a' : '#f59e0b'*/
+        },
+        pressed && {
+          backgroundColor: Colors[buttonType][1],
+          /*buttonType === ButtonTypes.Number? '#f59e0b' : '#b45309'*/
+        },
         buttonStyle,
       ]}
       onPress={onPress}
